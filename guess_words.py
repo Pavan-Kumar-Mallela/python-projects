@@ -104,7 +104,7 @@ wordList = ["happy", "tamilnadu", "cat", "facebook", "random"]
 word = random.choice(wordList)
 
 guessedWord = ['_'] * len(word)
-
+print(HANGMAN[-1])
 
 while attempts > 0:
    
@@ -119,8 +119,8 @@ while attempts > 0:
         print("Great guess!")
     else:
         attempts -= 1
-        print("Wrong guess! Attempts left: " + str(attempts)
-        print(HANGMAN[len(HANGMAN)-attempts)])
+        print("Wrong guess! Attempts left: " + str(attempts))
+        print(HANGMAN[attempts-len(HANGMAN)])
       
     if '_' not in guessedWord:
         print("\nCongratulations!! You guessed the word: " + word)
